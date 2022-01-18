@@ -3,6 +3,14 @@
         "firstname": "Mckinley",
         "lastname": "Jimenez",
         "email": "mckinleyvj@gmail.com",
-        "password": "123"
+        "password": "123",
+        "isEnabled": 1
+    },
+    {
+        "firstname": "Caleb Mathieu",
+        "lastname": "Jimenez",
+        "email": "calebmj@gmail.com",
+        "password": "123",
+        "isEnabled": 1
     }
 ]

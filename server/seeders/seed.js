@@ -1,11 +1,11 @@
 const db = require('../config/connection');
-const { Profile } = require('../models');
-const jsSeed = require('./accountSeed.json');
+const { Seeker } = require('../models');
+const acctSeed = require('./accountSeed.json');
 
 db.once('open', async () => {
   try {
-    await Profile.deleteMany({});
-    await Profile.create(jsSeed);
+    await Seeker.deleteMany({});
+    await Seeker.create(acctSeed);
 
     console.log('JS data done!');
     process.exit(0);

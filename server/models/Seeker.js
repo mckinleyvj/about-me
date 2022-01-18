@@ -31,6 +31,10 @@ const seekersSchema = new Schema({
     required: true,
     minlength: 3,
   },
+  isEnabled: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 // set up pre-save middleware to create password
