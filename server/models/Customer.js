@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 const moment = require('moment');
 
-const seekersSchema = new Schema({
+const customerSchema = new Schema({
   firstname: {
     type: String,
     required: true,
@@ -14,6 +14,19 @@ const seekersSchema = new Schema({
     required: true,
     unique: false,
     trim: true,
+  },
+  address: {
+    type: String,
+    required: true,
+    unique: false,
+    trim: false,
+  },
+  contact_no: {
+    type: Number,
+    required: true,
+    unique: false,
+    trim: true,
+    match: [/^(\d{7})$/],
   },
   email: {
     type: String,
@@ -38,7 +51,7 @@ const seekersSchema = new Schema({
 });
 
 // set up pre-save middleware to create password
-seekersSchema.pre('save', async function (next) {
+customerSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -48,10 +61,10 @@ seekersSchema.pre('save', async function (next) {
 });
 
 // compare the incoming password with the hashed password
-seekersSchema.methods.isCorrectPassword = async function (password) {
+customerSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const Seekers = model('Seekers', seekersSchema);
+const Customer = model('Customer', customerSchema);
 
-module.exports = Seekers;
+module.exports = Customer;

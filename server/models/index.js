@@ -1,4 +1,4 @@
-const Seeker = require('./Seeker');
-const Portfolio = require('./Portfolio');
+const Customer = require('./Customer');
+const Schedule = require('./Schedule');
 
-module.exports = { Seeker, Portfolio };
+module.exports = { Customer, Schedule };

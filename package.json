@@ -1,5 +1,5 @@
 {
-  "name": "about-me",
+  "name": "book-my-hair",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -11,9 +11,17 @@
     "build": "cd client && npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mac",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^5.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mckinleyvj/book-my-hair.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mckinleyvj/book-my-hair/issues"
+  },
+  "homepage": "https://github.com/mckinleyvj/book-my-hair#readme"
 }
