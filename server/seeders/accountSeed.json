@@ -1,15 +1,19 @@
 [
     {
-        "firstname": "Mckinley",
-        "lastname": "Jimenez",
-        "email": "mckinleyvj@gmail.com",
+        "firstname": "Zuraidah",
+        "lastname": "Khamis",
+        "address": "Spg. 555, Jln Subok, Brunei/Muara, BSB NBD",
+        "contact_no": "8767755",
+        "email": "zkh55@gmail.com",
         "password": "123",
         "isEnabled": 1
     },
     {
-        "firstname": "Caleb Mathieu",
-        "lastname": "Jimenez",
-        "email": "calebmj@gmail.com",
+        "firstname": "Zendaya",
+        "lastname": "Ali",
+        "address": "Spg. 333, Jln Kiarong, Brunei/Muara, BSB NBD",
+        "contact_no": "8767734",
+        "email": "zha1@gmail.com",
         "password": "123",
         "isEnabled": 1
     }
