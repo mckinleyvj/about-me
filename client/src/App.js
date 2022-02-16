@@ -6,14 +6,10 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Container, Box } from "@chakra-ui/react";
 
 import Home from './pages/Home';
-// import Seeker from './pages/Seeker';
-// import Signup from './pages/Signup';
-// import Login from './pages/Login';
-import Header from './components/Header';
-import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -36,31 +32,18 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
+      <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div className="container">
-            <Route exact path="/">
-              <Home />
-            </Route>
-            {/* <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/signup">
-              <Signup />
-            </Route>
-            <Route exact path="/me">
-              <Seeker />
-            </Route>
-            <Route exact path="/seeker/:seekerId">
-              <Seeker />
-            </Route> */}
-          </div>
-          <Footer />
-        </div>
+        <Container>
+          <Box w="500px" h="500px">
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
+            </Routes>
+          </Box>
+        </Container>
       </Router>
-    </ApolloProvider>
+   </ApolloProvider>
   );
 }
 
