@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_CUSTOMERS } from '../utils/queries';
 
-import { Container, Box, Center, Image, Flex, Badge, Text } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 
 const Home = () => {
  
@@ -10,15 +10,14 @@ const Home = () => {
     console.log(loading);
     console.log(data);
 
+    const bg = "black";
+
   return (
-    <Container>
-    <Center h="100vh">
-      <Box p="5" maxW="320px" borderWidth="1px">
-        <Image borderRadius="md" src="https://bit.ly/2k1H1t6" />
+    <Container bg={bg} w="100vw">
+        {/* <Image borderRadius="md" src="https://bit.ly/2k1H1t6" />
         <Flex align="baseline" mt={2}>
           <Badge colorScheme="pink">Plus</Badge>
           <Text
-            ml={2}
             textTransform="uppercase"
             fontSize="sm"
             fontWeight="bold"
@@ -26,10 +25,8 @@ const Home = () => {
           >
             Verified &bull; Cape Town
           </Text>
-        </Flex>
-      </Box>
-    </Center>
-    </Container>
+        </Flex> */}
+        </Container>
   );
 };
 

@@ -7,9 +7,9 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Container, Box } from "@chakra-ui/react";
 
 import Home from './pages/Home';
+import Header from './components/Header/index';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -33,15 +33,12 @@ const client = new ApolloClient({
 function App() {
   return (
       <ApolloProvider client={client}>
+        <Header/>
       <Router>
-        <Container>
-          <Box w="500px" h="500px">
-            <Routes>
-              <Route path="/" element={<Home />}></Route>
-              <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
-            </Routes>
-          </Box>
-        </Container>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
+        </Routes>
       </Router>
    </ApolloProvider>
   );

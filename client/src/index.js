@@ -1,11 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const theme = extendTheme({
+    textStyles: {
+      h1: {
+        fontSize: ['52px'],
+        fontWeight: 'bold',
+        lineHeight: '110%',
+        letterSpacing: '-2%',
+      },
+      h2: {
+        fontSize: ['25px'],
+        fontWeight: 'bold',
+        lineHeight: '110%',
+        letterSpacing: '-2%',
+      }
+  },
+})
+
 ReactDOM.render(
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     <App />
   </ChakraProvider>,
   document.getElementById("root")
