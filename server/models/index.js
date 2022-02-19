@@ -1,4 +1,5 @@
 const Customer = require('./Customer');
-const Schedule = require('./Schedule');
+const Appointments = require('./Appointments');
+const Service = require('./Service');
 
-module.exports = { Customer, Schedule };
+module.exports = { Customer, Appointments, Service };

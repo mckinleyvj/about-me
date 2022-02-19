@@ -19,6 +19,8 @@ html {
  */
 body {
 	margin: 0;
+	transition: 800ms;
+	scroll-behavior: smooth;
 }
 
 /**
@@ -26,6 +28,8 @@ body {
  */
 main {
 	display: block;
+	transition: 800ms;
+	scroll-behavior: smooth;
 }
 
 /**
@@ -57,7 +61,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-	font-family: sans-serif, -apple-system;
+	font-family: "Basic", sans-serif;
 	/* 1 */
 	font-size: 1em;
 	/* 2 */
@@ -100,7 +104,7 @@ strong {
 code,
 kbd,
 samp {
-	font-family: sans-serif, -apple-system;
+	font-family: "Basic", sans-serif;
 	/* 1 */
 	font-size: 1em;
 	/* 2 */
@@ -351,16 +355,18 @@ END NORMALIZE CSS
 html,
 body {
 	min-height: 100%;
+	transition: 800ms;
+	scroll-behavior: smooth;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol";
+	font-family: "Basic", sans-serif;
 	font-size: 16px;
 	color: #1a1a1a;
+	transition: 800ms;
+	scroll-behavior: smooth;
 }
 
 h1,
@@ -369,7 +375,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: sans-serif, -apple-system;
+	font-family: "Basic", sans-serif;
 	margin: 0 0 0.5rem;
 	line-height: 1.25;
 }

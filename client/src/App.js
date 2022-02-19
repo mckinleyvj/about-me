@@ -1,46 +1,37 @@
-import React from 'react';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
+
+import Layout from "./styles/Layout";
 
 import Home from './pages/Home';
-import Header from './components/Header/index';
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Dashboard from "./pages/Dashboard";
+import Appointments from "./pages/Appointments";
+import AppointmentDetl from "./pages/AppointmentDetails";
 
-const httpLink = createHttpLink({
-  uri: '/graphql',
-});
+// import Header from './components/Header/index';
+// import Footer from './components/Footer/index';
 
-const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
-  return {
-    headers: {
-      ...headers,
-      authorization: token ? `Bearer ${token}` : '',
-    },
-  };
-});
-
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
 
 function App() {
   return (
-      <ApolloProvider client={client}>
-        <Header/>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
-        </Routes>
-      </Router>
-   </ApolloProvider>
+    <div className="App">
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} /> */}
+
+        {/* <Route path="/" element={<Layout />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="appointments" element={<Appointments />} />
+          <Route path="appointments/:id" element={<AppointmentDetl />} />
+        </Route> */}
+      </Routes>
+    </div>
   );
 }
 

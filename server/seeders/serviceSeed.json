@@ -1,0 +1,22 @@
+[
+    {
+        "serv_title":  "Hair Services",
+          "serv_desc":  "Variety of hair services including cuts, dye, rebonding and curls.",
+          "serv_image": "hair.png"
+    },
+    {
+        "serv_title":  "Nail Services",
+          "serv_desc":  "Get your manicure and pedicure done with our large selection of products.",
+          "serv_image": "nails.png"
+    },
+    {
+        "serv_title":  "Beauty Services",
+          "serv_desc":  "Preparing for a reception? We can do that! Eye lashes and full make up services.",
+          "serv_image": "beauty.png"
+    },
+    {
+        "serv_title":  "Waxing Services",
+          "serv_desc":  "Lets keep it hygienic. Variety of services that will make sure you feel fresh all the time.",
+          "serv_image": "wax.png"
+    }
+]
