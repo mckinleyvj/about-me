@@ -25,7 +25,7 @@ const Home = () => {
             Fabulous Me.
           </Text>
           <Text textAlign="left" fontSize="1.5em">
-            Yakis Sally Hair and Beauty Salon SDN BHD
+            Yakis Sally Hair and Beauty Salon
           </Text>
           <Text textAlign="left" fontSize="1.5em" lineHeight={0}>
             Brunei Darussalam
@@ -37,7 +37,7 @@ const Home = () => {
         </Button>
       </Stack>
     </Box>
-    <Box bg="brand.200" h="70vh" opacity='0.8' >
+    <Box bg="brand.200" minH='70vh' opacity='0.8' >
       <Text align='center' fontWeight="bold" fontSize="2em" pt="5vh" pb="2vh">
         OUR{" "}
         <Box as={"span"} color="brand.500">

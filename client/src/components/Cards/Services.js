@@ -29,7 +29,7 @@ const ServicesCard = ({ service }) => {
         >
           {service.serv_title}
         </chakra.h1>
-        <chakra.h1 color="brand.500" fontSize="lg">
+        <chakra.h1 color="brand.500" fontSize="lg" textAlign='center'>
           {service.serv_desc}
         </chakra.h1>
       </Flex>

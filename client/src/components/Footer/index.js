@@ -18,6 +18,7 @@ const Footer = () => {
           <Stack align={"center"}>
             <Text color="brand.100" fontWeight="bold">Sitemap</Text>
             {/* <Link to="/about/#top">About Us</Link> */}
+            <a href='/'>Home</a>
             <a href='/about'>About Us</a>
             <a href='/contact'>Contact Us</a>
           </Stack>
