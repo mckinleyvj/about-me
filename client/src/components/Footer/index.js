@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Container,
@@ -7,7 +7,6 @@ import {
   Text,
   Flex,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (

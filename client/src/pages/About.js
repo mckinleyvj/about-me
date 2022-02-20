@@ -18,54 +18,48 @@ import Footer from "../components/Footer/index";
             <Image h='100vh' w='100vw' src='https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8'/>
         </Box>
         <Header />
-        <Stack direction="column" spacing="auto">
-          <Flex direction="column" justifyContent="center" alignItems="center">
+        <Flex direction="column" spacing="auto">
+          <Flex direction="column" justifyContent="center" alignSelf='center' w='80vw'>
             
-            <Stack h="88vh" mt="4vh" w='70vw'>
-              <Text fontSize="3xl" align='center'>
+            <Stack h="88vh" mt="4vh" >
+              <Box fontSize="3xl" align='center'>
              About Us
           <Text fontSize="lg">
             {" "}
            How it began{" "}
           </Text>
-              </Text>
+              </Box>
               <Text
                 color="brand.500"
                 textAlign="center"
                 px={200}
                 fontSize="1.2em"
-                py={50}
-              >
+                py={50} >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </Text>
-              <Text
-              color="gray.500"
-              textAlign="center"
-              px={200}
-              fontSize="1.2em"
-              py={50}
-              >
-                &lt; Reserved &gt;
-              </Text>
+              <Box fontSize="3xl" align='center'>
+              Testimonials
+          <Text fontSize="lg">
+            &lt; Reserved &gt;
+          </Text>
+              </Box>
              
             </Stack>
           </Flex>
-          <Box p="50px" alignSelf='center'>
-          <Text fontSize="3xl" align='center'>
+          <Box p="50px" alignSelf='center' w='80vw'>
+          <Box fontSize="3xl" align='center'>
              Gallery
           <Text fontSize="lg">
-            {" "}
-           What we do{" "}
+           What we do
           </Text>
-              </Text>
+              </Box>
             <Grid
               templateRows='repeat(2, 1fr)'
               templateColumns='repeat(5, 1fr)'
-              gap={4}
-            >
+              gap={4} >
               <GridItem rowSpan={2} colSpan={1}>
                 <Box>
                   <Image
@@ -111,7 +105,7 @@ import Footer from "../components/Footer/index";
               </GridItem>
             </Grid>
           </Box>
-        </Stack>
+        </Flex>
         <Footer />
       </Box>
     );
