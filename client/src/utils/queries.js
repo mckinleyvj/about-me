@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const GET_CUSTOMERINFO = gql`
-  {
-    customer {
+query oneCustomer($customerId: ID!) {
+    customer(customerId: $customerId) {
       _id
       firstname
       lastname
@@ -11,7 +11,6 @@ export const GET_CUSTOMERINFO = gql`
       email
       password
       isEnabled
-      createAt
     }
   }
 `;

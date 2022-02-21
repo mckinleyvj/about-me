@@ -11,7 +11,6 @@ import {
     MenuList,
   } from "@chakra-ui/react";
   import React from "react";
-  import { FiMenu } from "react-icons/fi";
   import { useNavigate } from "react-router-dom";
   import Auth from "../../utils/auth";
     
@@ -23,7 +22,10 @@ import {
 
     const handleLogout = () => {
       Auth.logout();
-      window.location.reload();
+
+      if (!Auth.loggedIn) {
+        window.location.replace('/login');
+      }
     };
     
     const buttonStyles = {

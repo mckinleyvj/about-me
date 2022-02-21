@@ -19,7 +19,6 @@ import { LOGIN_USER } from "../utils/mutations";
 const Login = () => {
   const navigate = useNavigate();
   const isLoggedIn = Auth.loggedIn();
-  console.log(isLoggedIn);
   
   if (isLoggedIn) {
     navigate('/dashboard');

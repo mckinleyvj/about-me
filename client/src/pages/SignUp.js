@@ -52,7 +52,7 @@ const SignUp = () => {
     try {
       const { data } = await signup({ variables: { ...userFormInput } });
       Auth.login(data.signup.token);
-      navigate(`/`);
+      navigate(`/dashboard`);
     } catch (err) {
       setError(true);
       console.error(err);

@@ -25,7 +25,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    customer: [Customer]
+    customer(customerId: ID!): Customer
     service: [Service]
   }
 
