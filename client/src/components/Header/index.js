@@ -13,22 +13,29 @@ import {
   import React from "react";
   import { FiMenu } from "react-icons/fi";
   import { useNavigate } from "react-router-dom";
-//   import { useDisclosure } from "@chakra-ui/react";
-  
-  const buttonStyles = {
-    borderRadius: "15px",
-
-  };
-  
-  const navLinksStyles = {
-    color: "black",
-    variant: "link",
-    fontWeight: "semibold",
-  };
-  
+  import Auth from "../../utils/auth";
+    
   const Header = () => {
+  
     const navigate = useNavigate();
-    // const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const isLoggedIn = Auth.loggedIn();
+
+    const handleLogout = () => {
+      Auth.logout();
+      window.location.reload();
+    };
+    
+    const buttonStyles = {
+      borderRadius: "15px",
+    };
+    
+    const navLinksStyles = {
+      color: "black",
+      variant: "link",
+      fontWeight: "semibold",
+    };
+
     return (
       <>
         <Flex
@@ -53,27 +60,30 @@ import {
             alignItems="end"
             display={["none", "none", "flex", "flex"]} >
 
-            <Button fontSize={18} onClick={() => navigate("/login")}
+            {isLoggedIn === true ? (
+              <Flex>
+            <Button fontSize={18} onClick={() => navigate("/dashboard")}
+            variant="ghost"
+            {...buttonStyles}
+            _hover={{ bg: "brand.500", color: "white", boxShadow: 'dark-lg', }}>
+            Dashboard
+          </Button>
+          <Button fontSize={18} onClick={handleLogout}
+          variant="ghost"
+          {...buttonStyles}
+          _hover={{ bg: "brand.500", color: "white", boxShadow: 'dark-lg', }}>
+          Logout
+        </Button>
+        </Flex>
+            ) : (
+              <Button fontSize={18} onClick={() => navigate("/login")}
               variant="ghost"
               {...buttonStyles}
               _hover={{ bg: "brand.500", color: "white", boxShadow: 'dark-lg', }}>
               Register / Sign in
             </Button>
+            )}
           </ButtonGroup>
-  
-          <Menu>
-            <MenuButton display={["flex", "flex", "none", "none"]}>
-              <Icon as={FiMenu} h={7} w={7} />
-            </MenuButton>
-            <MenuList>
-              <MenuItem onClick={() => navigate("/")}>Home</MenuItem>
-              <MenuItem onClick={() => navigate("/about")}>About Us</MenuItem>
-              <MenuItem onClick={() => navigate("/contact")}>Contact Us</MenuItem>
-              <MenuDivider />
-              <MenuItem onClick={() => navigate("/login")}>Login</MenuItem>
-              <MenuItem onClick={() => navigate("/client/signup")}>Sign Up</MenuItem>
-            </MenuList>
-          </Menu>
         </Flex>
       </>
     );

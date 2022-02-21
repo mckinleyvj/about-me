@@ -6,12 +6,15 @@ import Footer from "../components/Footer/index";
 import ServicesCard from "../components/Cards/Services.js";
 import { GET_SERVICES } from "../utils/queries";
 import { useNavigate } from "react-router-dom";
+import Auth from "../utils/auth";
 
 const Home = () => {
 
   const navigate = useNavigate();
   const { loading, data } = useQuery(GET_SERVICES);
   const serviceType = data?.service || [];
+
+  const isLoggedIn = Auth.loggedIn();
 
   return (
     <Box overflowX="hidden">
@@ -33,11 +36,17 @@ const Home = () => {
             Brunei Darussalam
           </Text>
         </Stack>
-
-        <Button w="250px" borderRadius="15px" bg="brand.500" color="white" _hover={{bg: "brand.100", color: "brand.500", boxShadow:'dark-lg'}} 
-        onClick={() => navigate(`/login`)}>
-          Save the Date
-        </Button>
+        {isLoggedIn === true ? (
+            <Button w="250px" borderRadius="15px" bg="brand.500" color="white" _hover={{bg: "brand.100", color: "brand.500", boxShadow:'dark-lg'}} 
+            onClick={() => navigate(`/appointments`)}>
+              Save the Date
+            </Button>
+            ) : (
+              <Button w="250px" borderRadius="15px" bg="brand.500" color="white" _hover={{bg: "brand.100", color: "brand.500", boxShadow:'dark-lg'}} 
+              onClick={() => navigate(`/login`)}>
+                Save the Date
+              </Button>
+            )}
       </Stack>
     </Box>
     <Box bg="brand.200" minH='70vh' opacity='0.8' >

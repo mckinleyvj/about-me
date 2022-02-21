@@ -28,13 +28,22 @@ export const SIGNUP = gql`
   }
 `;
 
-// export const LOGIN_USER = gql`
-//   mutation login($email: String!, $password: String!) {
-//     login: (email: $email, password: $password) {
-//       token
-//       customers {
-//         _id
-//       }
-//     }
-//   }
-// `;
+export const LOGIN_USER = gql`
+  mutation login(
+    $emailVal: String!
+    $passwordVal: String!
+    ) {
+    login(
+      email: $emailVal
+      password: $passwordVal
+      ) {
+      token
+      customer {
+        _id
+        email
+        firstname
+        lastname
+      }
+    }
+  }
+`;

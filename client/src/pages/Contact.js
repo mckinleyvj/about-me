@@ -64,12 +64,6 @@ const Contact = () => {
               <Input variant="flushed" name="nameVal" value={nameVal} onChange={onChange} />
             </InputGroup>
           </FormControl>
-          {/* <FormControl>
-            <FormLabel>Last Name</FormLabel>
-            <InputGroup>
-              <Input variant="flushed" />
-            </InputGroup>
-          </FormControl> */}
         </HStack>
 
         <HStack pr="50px" pt="50px">

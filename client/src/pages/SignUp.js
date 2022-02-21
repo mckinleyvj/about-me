@@ -53,7 +53,6 @@ const SignUp = () => {
       const { data } = await signup({ variables: { ...userFormInput } });
       Auth.login(data.signup.token);
       navigate(`/`);
-      console.log(userFormInput);
     } catch (err) {
       setError(true);
       console.error(err);
@@ -161,45 +160,21 @@ const SignUp = () => {
             ) : (
                 ""
             )}
-            {/* {errors && (
-              <Text mt="1vh" align="left" color="red">
-                {errors.password || errors.username}
-              </Text>
-            )}
-            {error && (
-              <Text mt="1vh" align="left" color="red">
-                {error}
-              </Text>
-            )} */}
             <Button
               mt="3vh"
               mb="2vh"
               type="submit"
               width="100%"
-              //isDisabled={!user.password || !user.username}
-              // bg={!user.password || !user.username ? "brand.200" : "brand.300"}
-              // color={
-                // !user.password || !user.username ? "brand.300" : "brand.200"
-              // }
               _focus={{ outline: "none" }}
-              _active={{ outline: "none" }}
-              // isLoading={loading}
-              //onClick={handleSubmit}
-            >
+              _active={{ outline: "none" }}>
               Create my account
             </Button>
             <Button
               type="submit"
               width="100%"
-              // isDisabled={!user.password || !user.username}
-              // bg={!user.password || !user.username ? "brand.200" : "brand.300"}
-              // color={
-                // !user.password || !user.username ? "brand.300" : "brand.200"
-              // }
               _focus={{ outline: "none" }}
               _active={{ outline: "none" }}
-              // isLoading={loading}
-              onClick={() => navigate(`/`)}>
+              onClick={() => navigate(`/dashboard`)}>
               Back to Home Page
             </Button>
           </form>
