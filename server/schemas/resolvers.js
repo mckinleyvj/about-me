@@ -17,6 +17,18 @@ const resolvers = {
       return await Service.find({});
     }
   },
+
+  Mutation: {
+    signup: async (root, { firstname, lastname, address, contact_no, email, password }) => {
+      try {
+        const user = await Customer.create({ firstname, lastname, address, contact_no, email, password });
+        const token = signToken(user);
+        return { token, user };
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  },
 };
 
 module.exports = resolvers;

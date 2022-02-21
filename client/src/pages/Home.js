@@ -1,13 +1,15 @@
 import React from "react";
-import { useQuery, useMutation } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { Box, Button, Flex, Stack, Text, Image } from "@chakra-ui/react";
 import Header from "../components/Header/index";
 import Footer from "../components/Footer/index";
 import ServicesCard from "../components/Cards/Services.js";
 import { GET_SERVICES } from "../utils/queries";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
 
+  const navigate = useNavigate();
   const { loading, data } = useQuery(GET_SERVICES);
   const serviceType = data?.service || [];
 
@@ -32,7 +34,8 @@ const Home = () => {
           </Text>
         </Stack>
 
-        <Button w="250px" borderRadius="15px" bg="brand.500" color="white" _hover={{bg: "brand.100", color: "brand.500", boxShadow:'dark-lg'}} >
+        <Button w="250px" borderRadius="15px" bg="brand.500" color="white" _hover={{bg: "brand.100", color: "brand.500", boxShadow:'dark-lg'}} 
+        onClick={() => navigate(`/login`)}>
           Save the Date
         </Button>
       </Stack>

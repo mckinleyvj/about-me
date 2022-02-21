@@ -6,7 +6,7 @@ const typeDefs = gql`
     firstname: String
     lastname: String
     address: String
-    contact_no: Int
+    contact_no: String
     email: String
     password: String
     isEnabled: Boolean
@@ -27,6 +27,17 @@ const typeDefs = gql`
   type Query {
     customer: [Customer]
     service: [Service]
+  }
+
+  type Mutation {
+    signup(
+      firstname: String!
+      lastname: String!
+      address: String!
+      contact_no: String!
+      email: String!
+      password: String!
+    ): Auth
   }
 
 

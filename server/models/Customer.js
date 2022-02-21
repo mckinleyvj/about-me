@@ -22,7 +22,7 @@ const customerSchema = new Schema({
     trim: false,
   },
   contact_no: {
-    type: Number,
+    type: String,
     required: true,
     unique: false,
     trim: true,
@@ -34,19 +34,19 @@ const customerSchema = new Schema({
     unique: true,
     match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
   },
-  createAt: {
-    type: Date,
-    default: Date.now,
-    get: (createdAtDT) => moment(createdAtDT).format('MMM DD, YYYY [at] hh:mm a')
-  },
   password: {
     type: String,
     required: true,
     minlength: 3,
   },
+  createAt: {
+    type: Date,
+    default: Date.now,
+    get: (createdAtDT) => moment(createdAtDT).format('MMM DD, YYYY [at] hh:mm a')
+  },
   isEnabled: {
     type: Boolean,
-    required: true,
+    default: true,
   },
 });
 
