@@ -1,6 +1,13 @@
 # fabulous-me
 
-![reactJS](https://img.shields.io/static/v1?label=reactJS&message=reactJS&color=red)
+![ReactJS](https://img.shields.io/static/v1?label=reactJS&message=reactJS&color=red)
+![ChakraUI](https://img.shields.io/static/v1?label=ChakraUI&message=ChakraUI&color=blue)
+![Apollo-Server-Express](https://img.shields.io/static/v1?label=Apollo-Server-Express&message=Apollo-Server-Express&color=red)
+![Bcrypt](https://img.shields.io/static/v1?label=Bcrypt&message=Bcrypt&color=blue)
+![JsonWebToken](https://img.shields.io/static/v1?label=JsonWebToken&message=JsonWebToken&color=red)
+![JWT-Decode](https://img.shields.io/static/v1?label=JWT-Decode&message=JWT-Decode&color=blue)
+![GraphQL](https://img.shields.io/static/v1?label=GraphQL&message=GraphQL&color=red)
+![React-Dom](https://img.shields.io/static/v1?label=React-Dom&message=React-Dom&color=blue)
 
 ## Table of Contents
 
@@ -15,10 +22,14 @@
 ## Description
 
 This is a full-stack MERN application built for a family-owned salon business in Brunei Darussalam. A project to which I will continue to enhance for future use of the business.
+
+Technologies used:
 MongoDB - Database
-Express(.js) - Node.js web framework
-React(.js) - Client-side JavaScript framework
-Node(.js) - JavaScript Web server
+ExpressJS - Node.js web framework
+ReactJS - Client-side JavaScript framework
+ChakraUI - Component Library
+
+Based on the limit time constraints to this project, I wasn't able to fully implement all the feature to it, including, deleting of appointments, administrative portal where it works as a Content Management System. Listing of Products, Staff, Branches and so on. But this will be touched again or possibly for bigger things to come.
 
 ## Contributing
 
@@ -44,9 +55,9 @@ git clone git@github.com:mckinleyvj/fabulous-me.git
 npm i || npm install n -g || npm install v15.0.0 (Specific version)
 ```
 
-4. Req: Install <kbd>MongoDB Compass</kbd>
+4. Req: Install <kbd>MongoDB Compass</kbd> on your local computer.
 
-5. Inject demodata to MongoDB
+5. Inject demo data into MongoDB
 
 ```bash
 npm run seed
@@ -64,11 +75,14 @@ npm run develop
 
 Please visit the live site at https://fabulous-me.herokuapp.com/
 
+Demonstration is available on https://drive.google.com/file/d/1WCTShyiqk-wBdFsmFNykGVrs78cZhv9W/view
+
 [Back to top](#fabulous-me)
 
 ## Usage
 
--   This project creates a new database on the local...
+-   This project is not protected by any copyright or law to be copied or replicated.
+-   This project welcomes contributors and is free to fork anytime.
 -   This project does not collect any bank details or personal information for misuse.
 -   This project is open source and is available to all developers that finds interest to enhancing features by raising [an issue](https://github.com/mckinleyvj/fabulous-me/issues) or simply by [contacting me](#questions).
 
@@ -79,7 +93,14 @@ Please visit the live site at https://fabulous-me.herokuapp.com/
 -   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 -   [NodeJS](https://nodejs.org/)
 -   Node Packages:
-    -   [moment](https://www.npmjs.com/package/moment)
+    -   [ReactJS](https://www.npmjs.com/package/reactjs)
+    -   [ChakraUI](https://www.npmjs.com/package/@chakra-ui/react)
+    -   [Apollo-Server-Express](https://www.npmjs.com/package/apollo-server-express)
+    -   [Bcrypt](https://www.npmjs.com/package/bcrypt)
+    -   [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken)
+    -   [JWT-Decode](https://www.npmjs.com/package/jwt-decode)
+    -   [GraphQL](https://www.npmjs.com/package/graphql)
+    -   [React-Dom](https://www.npmjs.com/package/react-dom)
 
 [Back to top](#fabulous-me)
 
@@ -87,7 +108,7 @@ Please visit the live site at https://fabulous-me.herokuapp.com/
 
 Mckinley Jimenez
 
--   [Portfolio](https://mckinleyvj.github.io/professional-portfolio/)
+-   [Portfolio](https://mckinleyvj.github.io/mac-react-portfolio/)
 -   [GitHub](https://github.com/mckinleyvj)
 -   [LinkedIn](https://www.linkedin.com/in/mckinleyjimenez)
 
