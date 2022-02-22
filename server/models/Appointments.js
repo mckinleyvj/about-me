@@ -16,7 +16,7 @@ const apptSchema = new Schema({
   },
   approved: {
     type: Boolean,
-    required: true
+    default: true,
   },
   branch: {
     type: String,

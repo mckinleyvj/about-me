@@ -20,7 +20,9 @@ import {
 
     const isLoggedIn = Auth.loggedIn();
 
-    const handleLogout = () => {
+    const handleLogout = (e) => {
+
+      e.preventDefault();
       Auth.logout();
 
       if (!Auth.loggedIn) {

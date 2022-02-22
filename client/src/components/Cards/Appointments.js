@@ -32,24 +32,25 @@ import {
           {appointment.datetime}
         </Text>
   
+        <Text color="neutral.500" fontWeight="bold">
+        {appointment.branch}
+              </Text> 
+
+              <Text color="neutral.500" fontWeight="bold">
+        {appointment.staff}
+        </Text>
         <VStack alignItems="left">
           <HStack>
             <VStack alignItems="left" textAlign="left" spacing={0}>
-              
               <Badge colorScheme="green" py={3} px={10} borderRadius="30px">
-          {appointment.branch}
+          {appointment.service_type}
         </Badge>
             </VStack>
           </HStack>
         </VStack>
 
-        <Text color="neutral.500" fontSize="1em">
-                {appointment.service_type}
-              </Text> 
-        <Text color="neutral.500" fontSize="1em" fontWeight="bold">
-          {appointment.staff}
-        </Text>
-        <Icon as={BiDotsVerticalRounded} />
+       
+        
       </Flex>
     );
   };

@@ -28,6 +28,31 @@ export const SIGNUP = gql`
   }
 `;
 
+export const ADD_APPOINTMENT = gql`
+  mutation addAppointment(
+    $service_type: String!
+    $customer: String!
+    $datetime: String!
+    $branch: String!
+    $staff: String!
+    ) {
+      addAppointment(
+      service_type: $service_type
+      customer: $customer
+      datetime: $datetime
+      branch: $branch
+      staff: $staff
+    ) {
+      _id
+      service_type
+      customer
+      datetime
+      branch
+      staff
+    }
+  }
+`;
+
 export const LOGIN_USER = gql`
   mutation login(
     $emailVal: String!

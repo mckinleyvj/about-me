@@ -3,37 +3,32 @@ import { Box,
   Image,
   Flex,
   HStack,
-  Spacer,
   Stack,
   Text,
-  VStack, } from "@chakra-ui/react";
+  VStack } from "@chakra-ui/react";
   import React from "react";
   // import avatar from 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.clipartmax.com%2Fmiddle%2Fm2i8K9i8i8K9G6N4_blank-avatar-profile-pic-icon-female%2F&psig=AOvVaw3zrNfG_YUw1-l2VQhS-VzR&ust=1645531465291000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKjt8N_gkPYCFQAAAAAdAAAAABAD';
   import { GET_CUSTOMERINFO, GET_APPOINTMENTS } from '../utils/queries';
   import { useQuery } from '@apollo/client';
-  // import { useNavigate } from "react-router-dom";
   import Header from "../components/Header/index";
   import Auth from "../utils/auth";
   import AppointmentsCard from "../components/Cards/Appointments";
+  import { useNavigate } from "react-router-dom";
   
   const Dashboard = () => {
 
+    const navigate = useNavigate();
     const isLoggedIn = Auth.loggedIn();
-  
+    
     if (!isLoggedIn) {
-      window.location.replace('/login');
+      navigate('/login');
     }
 
     const loggedIn_user = Auth.getProfile();
 
-    const { loading: loading1, data: data1 } = useQuery(GET_CUSTOMERINFO, 
-      {
-        variables: 
-        { 
-          customerId: loggedIn_user.data._id 
-        },
-    }
-    );
+    const { loading: loading1, data: data1 } = useQuery(GET_CUSTOMERINFO, {
+        variables: { customerId: loggedIn_user.data._id },
+    });
 
     const cust_info = data1?.customer || [];
 
@@ -46,7 +41,7 @@ import { Box,
     const appt_info = data2?.appointments || [];
     
     const handleAppt = () => {
-      window.location.replace('/appointments');
+      navigate('/appointments');
     };
 
     return (
@@ -57,10 +52,10 @@ import { Box,
     <Flex h='100vh' alignSelf='center' alignContent='center' flexDirection="column">
       <Header />
 
-        <Text fontSize="1.5em" textAlign="center">
+        <Text fontSize="1.5em" textAlign="center" fontWeight="bold">
           My Dashboard
         </Text>
-        <Flex h="80vh" w='80vw' alignSelf='center'>
+        <Flex w='80vw' alignSelf='center'>
         <Stack w="70%" mr={5}>
           <Flex
             height="20vh"
@@ -85,13 +80,13 @@ import { Box,
                 </Text>
               </HStack>
               <Text textAlign="left">
-                Lets take a look at some upcoming appointments.
+                Lets see what are your scheduled appointments.
               </Text>
             </VStack>
           </Flex>
 
-          <Text h="10%" textAlign="left" fontSize="1.2em" p={3}>
-            Upcoming Appointments
+          <Text textAlign="left" fontSize="1.2em" p={3} fontWeight="bold">
+            Scheduled Appointments
           </Text>
 
           <Box

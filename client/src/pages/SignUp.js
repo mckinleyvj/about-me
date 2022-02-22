@@ -14,15 +14,8 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import Auth from "../utils/auth";
-// import { useForm } from "../../utils/useForm";
-// import { FiEye, FiEyeOff } from "react-icons/fi";
-// import { FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { SIGNUP } from "../utils/mutations";
-// import loginImage from "../../assets/Loginpicture.svg";
-// import illustration from "../../assets/Mobile login-bro.svg";
-// import AuthLeftContainer from "../../components/PageSections/AuthLeftContainer";
-// import API from "../../utils/api";
 
 const SignUp = () => {
   const navigate = useNavigate();

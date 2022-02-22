@@ -42,6 +42,14 @@ const resolvers = {
 
       return { token, customer };
     },
+    addAppointment: async (root, { service_type, customer, datetime, branch, staff }) => {
+      try {
+        const newAppointment = await Appointments.create({ service_type, customer, datetime, branch, staff });
+        return { newAppointment };
+      } catch (e) {
+        console.error(e);
+      }
+    },
   },
 };
 

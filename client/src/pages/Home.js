@@ -15,6 +15,7 @@ const Home = () => {
   const serviceType = data?.service || [];
 
   const isLoggedIn = Auth.loggedIn();
+  console.log(isLoggedIn);
 
   return (
     <Box overflowX="hidden">
