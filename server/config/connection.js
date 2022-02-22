@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/fabulousme_db?authSource=admin',
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/fabulousme_db?authSource=admin',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
