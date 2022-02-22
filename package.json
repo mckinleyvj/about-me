@@ -1,5 +1,5 @@
 {
-  "name": "book-my-hair",
+  "name": "fabulous-me",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -18,10 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mckinleyvj/book-my-hair.git"
+    "url": "git+https://github.com/mckinleyvj/fabulous-me.git"
   },
   "bugs": {
-    "url": "https://github.com/mckinleyvj/book-my-hair/issues"
+    "url": "https://github.com/mckinleyvj/fabulous-me/issues"
   },
-  "homepage": "https://github.com/mckinleyvj/book-my-hair#readme"
+  "engines": {
+    "node": "16.8.0"
+  },
+  "homepage": "https://github.com/mckinleyvj/fabulous-me#readme"
 }
