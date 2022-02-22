@@ -14,7 +14,6 @@ const Home = () => {
   const { loading, data } = useQuery(GET_SERVICES);
   const serviceType = data?.service || [];
   
-  
   const isLoggedIn = Auth.loggedIn();
 
   return (
