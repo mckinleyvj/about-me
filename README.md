@@ -40,37 +40,31 @@ git clone git@github.com:mckinleyvj/fabulous-me.git
 npm i || npm install n -g || npm install v15.0.0 (Specific version)
 ```
 
-4. Req: Install <kbd>MySQL</kbd> schema and seeds. Make sure to have MySQL installed on your local machine.
+4. Req: Install <kbd>MongoDB Compass</kbd>
 
-```bash
-mysql -u root -p
-source db/schema.sql
-quit
-```
-
-5. Inject demodata to MySQL
+5. Inject demodata to MongoDB
 
 ```bash
 npm run seed
 ```
 
-6. Run the application invoking <kbd>npm run start</kbd>
+6. Run the application invoking <kbd>npm run develop</kbd>
 
 ```bash
-npm run start
+npm run develop
 ```
 
 [Back to top](#fabulous-me)
 
 ## Deployment
 
-Please visit the live site at https://mac-fabulous-me.herokuapp.com/
+Please visit the live site at https://fabulous-me.herokuapp.com/
 
 [Back to top](#fabulous-me)
 
 ## Usage
 
--   This project creates a new database on the local MySQL database server then injects data into it. It works as a social network site for posting thoughts and people to provide comments.
+-   This project creates a new database on the local...
 -   This project does not collect any bank details or personal information for misuse.
 -   This project is open source and is available to all developers that finds interest to enhancing features by raising [an issue](https://github.com/mckinleyvj/fabulous-me/issues) or simply by [contacting me](#questions).
 
@@ -81,14 +75,6 @@ Please visit the live site at https://mac-fabulous-me.herokuapp.com/
 -   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 -   [NodeJS](https://nodejs.org/)
 -   Node Packages:
-    -   [bcrypt](https://www.npmjs.com/package/bcrypt)
-    -   [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
-    -   [dotenv](https://www.npmjs.com/package/dotenv)
-    -   [express](https://www.npmjs.com/package/express)
-    -   [express-handlebars](https://www.npmjs.com/package/express-handlebars)
-    -   [express-session](https://www.npmjs.com/package/express-session)
-    -   [mysql2](https://www.npmjs.com/package/mysql2)
-    -   [sequelize](https://www.npmjs.com/package/sequelize)
     -   [moment](https://www.npmjs.com/package/moment)
 
 [Back to top](#fabulous-me)
