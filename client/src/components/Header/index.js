@@ -20,14 +20,10 @@ import {
 
     const isLoggedIn = Auth.loggedIn();
 
-    const handleLogout = (e) => {
+    const handleLogout = () => {
 
-      e.preventDefault();
       Auth.logout();
-
-      if (!Auth.loggedIn) {
-        window.location.replace('/login');
-      }
+      window.location.replace('/login');
     };
     
     const buttonStyles = {
