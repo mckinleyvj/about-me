@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const moment = require('moment');
 
 const apptSchema = new Schema({
   service_type: {
@@ -10,10 +11,18 @@ const apptSchema = new Schema({
   },
   datetime: {
     type: Date,
+    default: Date.now,
+    get: (datetimeDt) => moment(datetimeDt).format('DD/MM/YYYY')
   },
   approved: {
     type: Boolean,
     required: true
+  },
+  branch: {
+    type: String,
+  },
+  staff: {
+    type: String
   }
 });
 

@@ -9,7 +9,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Dashboard from "./pages/Dashboard";
 import Appointments from "./pages/Appointments";
-import AppointmentDetl from "./pages/AppointmentDetails";
+// import AppointmentDetl from "./pages/AppointmentDetails";
 
 // import Header from './components/Header/index';
 // import Footer from './components/Footer/index';
@@ -26,7 +26,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/appointments" element={<Appointments />} />
+        {/* <Route path="/appointments" element={<Appointments />} /> */}
         {/*<Route path="/" element={<Layout />}>
           
            

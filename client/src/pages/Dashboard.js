@@ -1,5 +1,4 @@
-import { Avatar,
-  Box,
+import { Box,
   Center,
   Image,
   Flex,
@@ -10,11 +9,12 @@ import { Avatar,
   VStack, } from "@chakra-ui/react";
   import React from "react";
   // import avatar from 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.clipartmax.com%2Fmiddle%2Fm2i8K9i8i8K9G6N4_blank-avatar-profile-pic-icon-female%2F&psig=AOvVaw3zrNfG_YUw1-l2VQhS-VzR&ust=1645531465291000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKjt8N_gkPYCFQAAAAAdAAAAABAD';
-  import { GET_CUSTOMERINFO } from '../utils/queries';
+  import { GET_CUSTOMERINFO, GET_APPOINTMENTS } from '../utils/queries';
   import { useQuery } from '@apollo/client';
-  import { useNavigate } from "react-router-dom";
+  // import { useNavigate } from "react-router-dom";
   import Header from "../components/Header/index";
   import Auth from "../utils/auth";
+  import AppointmentsCard from "../components/Cards/Appointments";
   
   const Dashboard = () => {
 
@@ -26,12 +26,25 @@ import { Avatar,
 
     const loggedIn_user = Auth.getProfile();
 
-    const { loading, data } = useQuery(GET_CUSTOMERINFO, {
-      variables: { customerId: loggedIn_user.data._id },
+    const { loading: loading1, data: data1 } = useQuery(GET_CUSTOMERINFO, 
+      {
+        variables: 
+        { 
+          customerId: loggedIn_user.data._id 
+        },
+    }
+    );
+
+    const cust_info = data1?.customer || [];
+
+    const customer = cust_info.firstname + " " + cust_info.lastname;
+
+    const { loading: loading2, data: data2 } = useQuery(GET_APPOINTMENTS, {
+      variables: { customer: customer },
     });
 
-    const cust_info = data?.customer || [];
-
+    const appt_info = data2?.appointments || [];
+    
     const handleAppt = () => {
       window.location.replace('/appointments');
     };
@@ -45,7 +58,7 @@ import { Avatar,
       <Header />
 
         <Text fontSize="1.5em" textAlign="center">
-          Dashboard
+          My Dashboard
         </Text>
         <Flex h="80vh" w='80vw' alignSelf='center'>
         <Stack w="70%" mr={5}>
@@ -72,7 +85,7 @@ import { Avatar,
                 </Text>
               </HStack>
               <Text textAlign="left">
-                Have a look at your latest appointments
+                Lets take a look at some upcoming appointments.
               </Text>
             </VStack>
           </Flex>
@@ -86,17 +99,10 @@ import { Avatar,
             bg="white"
             borderRadius="5px"
             height="60%"
-            mt="30px"
-          >
-            <Spacer />
-            {/* {AppointmentData.map((appointment) => {
-              return (
-                <AppointmentCard
-                  appointment={appointment}
-                  key={appointment.id}
-                />
-              );
-            })} */}
+            mt="30px">
+            {appt_info.map((appt) => {
+              return <AppointmentsCard appointment={appt} key={appt._id} />;
+            })}
           </Box>
         </Stack>
         <Stack w="30%" height="80vh">

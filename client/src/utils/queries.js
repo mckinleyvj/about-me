@@ -15,6 +15,20 @@ query oneCustomer($customerId: ID!) {
   }
 `;
 
+export const GET_APPOINTMENTS = gql`
+query customerAppt($customer: String!) {
+  appointments(customer: $customer) {
+    _id
+    service_type
+    customer
+    datetime
+    approved
+    branch
+    staff
+  }
+}
+`;
+
 export const GET_SERVICES = gql`
   query allService {
     service {

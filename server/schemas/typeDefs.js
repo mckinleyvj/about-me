@@ -19,6 +19,16 @@ const typeDefs = gql`
     serv_image: String
   }
 
+  type Appointments {
+    _id: ID
+    service_type: String
+    customer: String
+    datetime: String
+    approved: Boolean
+    branch: String
+    staff: String
+  }
+
   type Auth {
     token: ID!
     customer: Customer
@@ -26,6 +36,7 @@ const typeDefs = gql`
 
   type Query {
     customer(customerId: ID!): Customer
+    appointments(customer: String!): [Appointments]
     service: [Service]
   }
 

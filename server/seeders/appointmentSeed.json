@@ -1,0 +1,18 @@
+[
+    {
+        "service_type":  "Hair Services",
+          "customer":  "Zendaya Ali",
+          "datetime": "2022-02-25",
+          "approved": 1,
+          "branch": "Mentiri",
+          "staff": "Kate"
+    },
+    {
+        "service_type":  "Nail Services",
+          "customer":  "Zendaya Ali",
+          "datetime": "2022-02-25",
+          "approved": 1,
+          "branch": "Mentiri",
+          "staff": "Kate"
+    }
+]
