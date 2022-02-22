@@ -14,7 +14,11 @@
 
 ## Description
 
-<Reserved>
+This is a full-stack MERN application built for a family-owned salon business in Brunei Darussalam. A project to which I will continue to enhance for future use of the business.
+MongoDB - Database
+Express(.js) - Node.js web framework
+React(.js) - Client-side JavaScript framework
+Node(.js) - JavaScript Web server
 
 ## Contributing
 
