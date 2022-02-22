@@ -12,6 +12,9 @@ import {
   
     const navigate = useNavigate();
 
+    const isLoggedIn = Auth.loggedIn();
+    console.log(isLoggedIn);
+
     const handleLogout = () => {
       Auth.logout();
       window.location.replace('/login');
