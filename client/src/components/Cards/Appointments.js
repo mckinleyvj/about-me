@@ -3,22 +3,18 @@ import {
     Text,
     useColorModeValue,
     VStack,
-    Icon,
     Flex,
     Badge,
   } from "@chakra-ui/react";
   import React from "react";
   import { BiDotsVerticalRounded } from "react-icons/bi";
-  import { useNavigate } from "react-router-dom";
   
   const Appointments = ({ appointment }) => {
-    const navigate = useNavigate();
     return (
       <Flex
         mx="auto"
         bg={useColorModeValue("white", "gray.800")}
         shadow="lg"
-        // rounded="xl"
         mb="2vh"
         alignItems="center"
         p={5}
@@ -48,9 +44,7 @@ import {
             </VStack>
           </HStack>
         </VStack>
-
-       
-        
+        <BiDotsVerticalRounded/>
       </Flex>
     );
   };

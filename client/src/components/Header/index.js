@@ -3,14 +3,8 @@ import {
     ButtonGroup,
     Flex,
     HStack,
-    Icon,
-    Menu,
-    MenuButton,
-    MenuDivider,
-    MenuItem,
-    MenuList,
   } from "@chakra-ui/react";
-  import React from "react";
+  import React, { useState} from "react";
   import { useNavigate } from "react-router-dom";
   import Auth from "../../utils/auth";
     
@@ -19,9 +13,12 @@ import {
     const navigate = useNavigate();
 
     const isLoggedIn = Auth.loggedIn();
+    if (isLoggedIn === false) {
+      Auth.logout();
+      window.location.replace('/login');
+    }
 
     const handleLogout = () => {
-
       Auth.logout();
       window.location.replace('/login');
     };
@@ -59,7 +56,6 @@ import {
           <ButtonGroup
             alignItems="end"
             display={["none", "none", "flex", "flex"]} >
-
             {isLoggedIn === true ? (
               <Flex>
             <Button fontSize={18} onClick={() => navigate("/dashboard")}

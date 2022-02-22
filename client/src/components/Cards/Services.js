@@ -1,4 +1,4 @@
-import { Flex, chakra, Image, VStack } from "@chakra-ui/react";
+import { Flex, chakra, Image } from "@chakra-ui/react";
 import React from "react";
 
 const ServicesCard = ({ service }) => {
