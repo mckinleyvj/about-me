@@ -3,8 +3,15 @@ import {
     ButtonGroup,
     Flex,
     HStack,
+    MenuItem,
+    MenuDivider,
+    Menu,
+    MenuButton,
+    Icon,
+    MenuList,
   } from "@chakra-ui/react";
-  import React, { useState} from "react";
+  import React from "react";
+  import { FiMenu } from "react-icons/fi";
   import { useNavigate } from "react-router-dom";
   import Auth from "../../utils/auth";
     
@@ -76,6 +83,22 @@ import {
             </Button>
             )}
           </ButtonGroup>
+
+          <Menu>
+          <MenuButton display={["flex", "flex", "none", "none"]}>
+            <Icon as={FiMenu} h={7} w={7} />
+          </MenuButton>
+          <MenuList>
+            <MenuItem onClick={() => navigate("/")}>Home</MenuItem>
+            <MenuItem onClick={() => navigate("/about")}>About Us</MenuItem>
+            <MenuItem onClick={() => navigate("/contact")}>Contact Us</MenuItem>
+            <MenuDivider />
+            <MenuItem onClick={() => navigate("/login")}>Login</MenuItem>
+            <MenuItem onClick={() => navigate("/signup")}>Sign Up</MenuItem>
+          </MenuList>
+        </Menu>
+
+
         </Flex>
       </>
     );
