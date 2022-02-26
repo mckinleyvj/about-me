@@ -158,7 +158,7 @@ const Dashboard = () => {
 								Scheduled Appointments
 							</Text>
 
-							<Box width='100%' bg='white' borderRadius='5px' height='60%' mt='30px'>
+							<Box width='100%' bg='white' borderRadius='5px' mt='30px'>
 								{appt_info.map((appt) => {
 									return <AppointmentsCard appointment={appt} key={appt._id} />;
 								})}
