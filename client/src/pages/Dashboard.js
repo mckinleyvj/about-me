@@ -95,7 +95,7 @@ const Dashboard = () => {
 								Scheduled Appointments
 							</Text>
 
-							<Box width='100%' bg='white' borderRadius='5px' height='60%' mt='30px'>
+							<Box width='100%' bg='white' borderRadius='5px' mt='30px'>
 								{appt_info.map((appt) => {
 									return <AppointmentsCard appointment={appt} key={appt._id} />;
 								})}
@@ -111,7 +111,8 @@ const Dashboard = () => {
 								alignItems='center'
 								_hover={{ bg: 'brand.200' }}
 								cursor='pointer'
-								justifyContent='center'>
+								justifyContent='center'
+								mt='15'>
 								<Center
 									ml={5}
 									w='30px'
