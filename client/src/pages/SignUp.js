@@ -190,7 +190,7 @@ const SignUp = () => {
 									width='100%'
 									_focus={{ outline: 'none' }}
 									_active={{ outline: 'none' }}
-									onClick={() => navigate(`/dashboard`)}>
+									onClick={() => navigate(`/`)}>
 									Back to Home Page
 								</Button>
 							</form>
@@ -325,7 +325,7 @@ const SignUp = () => {
 									width='100%'
 									_focus={{ outline: 'none' }}
 									_active={{ outline: 'none' }}
-									onClick={() => navigate(`/dashboard`)}>
+									onClick={() => navigate(`/`)}>
 									Back to Home Page
 								</Button>
 							</form>
