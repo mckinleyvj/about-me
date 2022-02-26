@@ -1,22 +1,22 @@
 [
     {
-        "serv_title":  "Hair Services",
-          "serv_desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "serv_image": "hair.png"
+        "serv_title": "Hair Services",
+        "serv_desc": "Styling, foiling, colour, fashion colouring, balliage, permanent hair straightening, keratin smoothing hair treatment and hair extensions.",
+        "serv_image": "hair.png"
     },
     {
-        "serv_title":  "Nail Services",
-        "serv_desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "serv_image": "nails.png"
+        "serv_title": "Nail Services",
+        "serv_desc":  "Give those hands and feet some tendering loving care. Our manicure and pedicure services is just right for you.",
+        "serv_image": "nails.png"
     },
     {
-        "serv_title":  "Beauty Services",
-        "serv_desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "serv_image": "beauty.png"
+        "serv_title": "Facial Services",
+        "serv_desc":  "Giving your skin a break from the aggressions of the sun, urban life and pollution, with a regular facial treatment.",
+        "serv_image": "beauty.png"
     },
     {
-        "serv_title":  "Waxing Services",
-        "serv_desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "serv_image": "wax.png"
+        "serv_title": "Waxing Services",
+        "serv_desc":  "All waxing treatments, including our Brazilian, use the highest quality of organic strip & hot wax to deliver gentle & effective hair removal.",
+        "serv_image": "wax.png"
     }
 ]
