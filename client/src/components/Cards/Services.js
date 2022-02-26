@@ -6,7 +6,7 @@ const ServicesCard = ({ service }) => {
 		<Flex
 			justifyContent='center'
 			alignItems='flex-start'
-			width='80vw'
+			width='200px'
 			mx='auto'
 			mb='7vh'
 			_hover={{ rounded: 'lg', boxShadow: 'dark-lg', bg: 'white', cursor: 'pointer' }}

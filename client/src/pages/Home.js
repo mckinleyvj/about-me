@@ -10,10 +10,10 @@ import Auth from '../utils/auth';
 
 const Home = () => {
 	const [isSmallerThan800] = useMediaQuery('(max-width: 800px)');
-	// const [isSmallerThan425] = useMediaQuery('(max-width: 425px)');
 
 	const navigate = useNavigate();
 	const { loading, data } = useQuery(GET_SERVICES);
+
 	const serviceType = data?.service || [];
 
 	const isLoggedIn = Auth.loggedIn();
@@ -36,7 +36,7 @@ const Home = () => {
 								textAlign='left'
 								fontSize='2em'
 								fontWeight='bold'
-								w='100vw'
+								// w='100vw'
 								color='brand.500'
 								letterSpacing='0.5rem'>
 								Fabulous Me.
@@ -89,7 +89,7 @@ const Home = () => {
 								textAlign='left'
 								fontSize='4em'
 								fontWeight='bold'
-								w='45vw'
+								// w='45vw'
 								color='brand.500'
 								letterSpacing='0.5rem'>
 								Fabulous Me.
