@@ -53,6 +53,19 @@ export const ADD_APPOINTMENT = gql`
 	}
 `;
 
+export const CANCEL_APPOINTMENT = gql`
+	mutation cancelAppointment($apptId: ID!) {
+		cancelAppointment(apptId: $apptId) {
+			_id
+			service_type
+			customer
+			datetime
+			branch
+			staff
+		}
+	}
+`;
+
 export const LOGIN_USER = gql`
 	mutation login($emailVal: String!, $passwordVal: String!) {
 		login(email: $emailVal, password: $passwordVal) {

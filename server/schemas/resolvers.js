@@ -63,6 +63,15 @@ const resolvers = {
 				console.error(e);
 			}
 		},
+		cancelAppointment: async (root, { apptId }, context) => {
+			if (context.user) {
+				const deletedAppointment = await Appointments.findOneAndDelete({
+					_id: apptId,
+				});
+				return deletedAppointment;
+			}
+			throw new AuthenticationError('You need to be logged in!');
+		},
 	},
 };
 

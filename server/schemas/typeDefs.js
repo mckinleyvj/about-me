@@ -57,6 +57,7 @@ const typeDefs = gql`
 			branch: String!
 			staff: String!
 		): Appointments
+		cancelAppointment(apptId: ID!): Appointments
 	}
 `;
 
