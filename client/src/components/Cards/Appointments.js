@@ -10,6 +10,7 @@ import {
 	Menu,
 	MenuButton,
 	Button,
+	Box,
 } from '@chakra-ui/react';
 import React from 'react';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
@@ -36,37 +37,61 @@ const Appointments = ({ appointment }) => {
 			shadow='lg'
 			mb='2vh'
 			p={5}
-			cursor='pointer'
+			// cursor='pointer'
 			alignItems='center'>
 			<Flex
-				alignItems='center'
+				alignItems='flex-start'
 				justifyContent='space-between'
 				flexDirection='column'
 				width='100%'>
 				<Text alignItems='center' textAlign='left' fontWeight='bold' color='neutral.500'>
-					{appointment.datetime}
+					Date:{' '}
+					<Box as={'span'} fontWeight='normal' color='brand.500'>
+						{appointment.datetime}
+					</Box>
 				</Text>
 
 				<Text color='neutral.500' fontWeight='bold'>
-					{appointment.branch}
+					Branch:{' '}
+					<Box as={'span'} fontWeight='normal' color='brand.500'>
+						{appointment.branch}
+					</Box>
 				</Text>
 
 				<Text color='neutral.500' fontWeight='bold'>
-					{appointment.staff}
+					Preferred staff:{' '}
+					<Box as={'span'} fontWeight='normal' color='brand.500'>
+						{appointment.staff}
+					</Box>
 				</Text>
 				<VStack alignItems='left'>
 					<HStack>
 						<VStack alignItems='left' textAlign='left' spacing={0}>
-							<Badge colorScheme='green' py={3} px={10} borderRadius='30px'>
-								{appointment.service_type}
-							</Badge>
+							<Text color='neutral.500' fontWeight='bold'>
+								Service:{' '}
+								<Box as={'span'} fontWeight='normal' color='brand.500'>
+									{appointment.service_type}
+								</Box>
+							</Text>
 						</VStack>
 					</HStack>
 				</VStack>
 			</Flex>
+			<Text>
+				{appointment.approved ? (
+					<Badge colorScheme='green' py={3} px={10} borderRadius='30px'>
+						Approved
+					</Badge>
+				) : (
+					<Badge colorScheme='red' py={3} px={10} borderRadius='30px'>
+						Awaiting approval
+					</Badge>
+				)}
+			</Text>
 			<Menu>
 				<MenuButton
 					as={Button}
+					cursor='pointer'
 					background='transparent'
 					rightIcon={<BiDotsVerticalRounded />}
 				/>

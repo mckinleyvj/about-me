@@ -45,6 +45,7 @@ const Appointments = () => {
 		datetime: '',
 		branch: '',
 		staff: '',
+		approved: false,
 	});
 
 	const [error, setError] = useState(false);

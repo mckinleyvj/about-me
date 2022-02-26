@@ -56,6 +56,7 @@ const typeDefs = gql`
 			datetime: String!
 			branch: String!
 			staff: String!
+			approved: Boolean!
 		): Appointments
 		cancelAppointment(apptId: ID!): Appointments
 	}

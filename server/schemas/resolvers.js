@@ -49,7 +49,10 @@ const resolvers = {
 
 			return { token, customer };
 		},
-		addAppointment: async (root, { service_type, customer, datetime, branch, staff }) => {
+		addAppointment: async (
+			root,
+			{ service_type, customer, datetime, branch, staff, approved }
+		) => {
 			try {
 				const newAppointment = await Appointments.create({
 					service_type,
@@ -57,6 +60,7 @@ const resolvers = {
 					datetime,
 					branch,
 					staff,
+					approved,
 				});
 				return { newAppointment };
 			} catch (e) {

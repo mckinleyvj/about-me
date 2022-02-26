@@ -35,6 +35,7 @@ export const ADD_APPOINTMENT = gql`
 		$datetime: String!
 		$branch: String!
 		$staff: String!
+		$approved: Boolean!
 	) {
 		addAppointment(
 			service_type: $service_type
@@ -42,6 +43,7 @@ export const ADD_APPOINTMENT = gql`
 			datetime: $datetime
 			branch: $branch
 			staff: $staff
+			approved: $approved
 		) {
 			_id
 			service_type
@@ -49,6 +51,7 @@ export const ADD_APPOINTMENT = gql`
 			datetime
 			branch
 			staff
+			approved
 		}
 	}
 `;
